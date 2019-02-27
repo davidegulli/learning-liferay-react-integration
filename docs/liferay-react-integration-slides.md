@@ -154,7 +154,7 @@ La stringA [LIFERAY_HOME] deve essere sostituita il percorso assoluto della cart
 # Liferay & OSGI
 
 - L'intera architettura liferay dalla versione 7.0 in poi si basa su la tecnologia OSGI
-- Per poter sviluppare in liferay è mandatoria capire i concetti base della tecnologia OSGI
+- Per poter sviluppare in liferay è mandatorio capire i concetti base della tecnologia OSGI
 
 ---
 
@@ -243,7 +243,7 @@ La definizione di Liferay:
 
 # liferay-npm-bundler
 
-In buona sostanza si tratta di un tool che prende in input un portlet project e restituisce in output nella cartella build tutti i file necessari compresi, gli npm packages, per mettere a disposizione della portlet uno specifico framework javascript.
+In buona sostanza si tratta di un tool che prende in input un portlet project e restituisce in output, nella cartella build, tutti i file necessari, compresi gli npm packages, per mettere a disposizione della portlet uno specifico framework javascript.
 
 --- 
 
@@ -265,7 +265,7 @@ In buona sostanza si tratta di un tool che prende in input un portlet project e 
 
 # Creazione modulo Liferay React Portlet
 
-Per creare un modulo che contenga una o più __Liferay React Portlet__ abbio due via, utilizzare l'ide Liferay Developer Studio o da linea di comando attraverso BladeCLI.
+Per creare un modulo che contenga una o più __Liferay React Portlet__ abbiamo due vie, utilizzare l'ide Liferay Developer Studio oppure da linea di comando attraverso BladeCLI.
 Entrambi i tool sfruttano il project template _npm-portlet-react_: https://dev.liferay.com/fr/develop/reference/-/knowledge_base/7-1/npm-react-portlet-template
   
   
@@ -307,13 +307,13 @@ $ blade gw deploy
 ```
 
 
-__Nota:__ E' interessante notare come dopo la build del modulo nella cartella del progetto, effettuando un refresh, comparirà la cartella: _node_modules_ ed il file: _package-lock.json_
+__Nota:__ E' interessante notare come dopo la build del modulo, nella cartella del progetto, effettuando un refresh, comparirà la cartella: _node_modules_ ed il file: _package-lock.json_
 
 --- 
 
 # Coding Time
 
-Proviamo a divertirci un pò scrivendo un pò di codice nella nostra portlet React
+Proviamo a divertirci scrivendo un pò di codice nella nostra portlet React
 
 ---
 
