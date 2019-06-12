@@ -7,11 +7,10 @@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
 taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<%@ page import="com.liferay.learning.example.react.constants.ExampleReactWebKeys" %>
-
 <liferay-theme:defineObjects />
 
 <portlet:defineObjects />
+
 <%
-String bootstrapRequire = (String)renderRequest.getAttribute(ExampleReactWebKeys.BOOTSTRAP_REQUIRE);
+String mainRequire = (String)renderRequest.getAttribute("mainRequire");
 %>

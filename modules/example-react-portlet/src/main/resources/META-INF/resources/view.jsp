@@ -1,7 +1,7 @@
 <%@ include file="/init.jsp" %>
 
-<div id="<portlet:namespace />"></div>
+<div id="<portlet:namespace />-root"></div>
 
-<aui:script require="<%= bootstrapRequire %>">
-	bootstrapRequire.default('<portlet:namespace />');
+<aui:script require="<%= mainRequire %>">
+	main.default('<portlet:namespace />-root');
 </aui:script>

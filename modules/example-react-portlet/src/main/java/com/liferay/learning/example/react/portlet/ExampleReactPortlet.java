@@ -1,11 +1,8 @@
 package com.liferay.learning.example.react.portlet;
 
 import com.liferay.learning.example.react.constants.ExampleReactPortletKeys;
-import com.liferay.learning.example.react.constants.ExampleReactWebKeys;
 
-import com.liferay.frontend.js.loader.modules.extender.npm.JSPackage;
 import com.liferay.frontend.js.loader.modules.extender.npm.NPMResolver;
-
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import java.io.IOException;
@@ -25,6 +22,7 @@ import org.osgi.service.component.annotations.Reference;
 	immediate = true,
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
+		"com.liferay.portlet.header-portlet-css=/css/index.css",
 		"com.liferay.portlet.instanceable=true",
 		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp",
@@ -41,11 +39,9 @@ public class ExampleReactPortlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 
-		JSPackage jsPackage = _npmResolver.getJSPackage();
-
 		renderRequest.setAttribute(
-			ExampleReactWebKeys.BOOTSTRAP_REQUIRE,
-			jsPackage.getResolvedId() + " as bootstrapRequire");
+			"mainRequire",
+			_npmResolver.resolveModuleName("example-react-portlet") + " as main");
 
 		super.doView(renderRequest, renderResponse);
 	}

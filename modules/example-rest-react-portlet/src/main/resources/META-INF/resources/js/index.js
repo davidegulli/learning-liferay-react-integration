@@ -4,13 +4,14 @@ import ReactDOM from 'react-dom';
 const INITIAL_STATE = { error: null, isLoading: true, items: [] }
 
 function MyFunctionalComponent(props) {
+	
 	const { companyId, authToken } = props;
-
 	const [state, setState] = React.useState(INITIAL_STATE);
 
 	React.useEffect(() => {
 
-		fetch(`/api/jsonws/user/get-company-users/company-id/${companyId}/start/0/end/100?p_auth=${authToken}`)
+		fetch(`/api/jsonws/group/get-groups/company-id/${companyId}/parent-group-id/0/site/true?p_auth=${authToken}`)
+		/*fetch(`/api/jsonws/group/get-company-group/company-id/${companyId}?p_auth=${authToken}`)*/
 			.then(response => response.json())
 			.then(result => {
 
@@ -42,7 +43,7 @@ function MyFunctionalComponent(props) {
 			<ul>
 				{state.items.map(item => (
 					<li key={item.userId}>
-						{item.userId} - {item.firstName}
+						{item.groupId} - {item.descriptiveName}
 					</li>
 				))}
 			</ul>
