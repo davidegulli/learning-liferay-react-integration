@@ -1,0 +1,5 @@
+Bundle-Name: example-react-rest-portlet
+Bundle-SymbolicName: com.liferay.learning.example.react.rest
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.learning.example.react.rest.constants
+Web-ContextPath: /example-react-rest-portlet
